@@ -75,7 +75,7 @@ class Profile extends Main_Controller {
 					'updated_date' => date('Y-m-d : h:m:s')
 				);
 
-				// PROFILE PICTURE
+				// PROFILE PICTURE upload
 				if(!empty($_FILES['profile_picture']['name']))
 				{
 					$path = 'uploads/profile_pictures/';
