@@ -1,0 +1,1 @@
+If you are a existing and want to upgrade your version 2 to 2.1. Pleae import the xx_currency & xx_general_settings tables.
