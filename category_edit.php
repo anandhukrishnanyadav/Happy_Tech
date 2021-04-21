@@ -6,8 +6,8 @@
           <h4><i class="fa fa-pencil"></i> &nbsp; Edit Category</h4>
         </div>
         <div class="col-md-6 text-right">
-          <a href="<?= base_url('admin/blog/category'); ?>" class="btn btn-success"><i class="fa fa-list"></i> Category List</a>
-          <a href="<?= base_url('admin/blog/category/add'); ?>" class="btn btn-success"><i class="fa fa-plus"></i> Add New category</a>
+          <a href="<?= base_url('admin/category'); ?>" class="btn btn-success"><i class="fa fa-list"></i>  category List</a>
+          <a href="<?= base_url('admin/category/add'); ?>" class="btn btn-success"><i class="fa fa-plus"></i> Add New category</a>
         </div>
         
       </div>
@@ -18,7 +18,7 @@
       <div class="box">
         <div class="box-body">
           <?php validation_errors(); ?>
-          <?php echo form_open(base_url('admin/blog/category/edit/'.$category['id']), 'class="form-horizontal"' )?> 
+          <?php echo form_open(base_url('admin/category/edit/'.$category['id']), 'class="form-horizontal"' )?> 
               <div class="form-group">
                 <label for="category_name" class="col-sm-2 control-label">Category Name</label>
 

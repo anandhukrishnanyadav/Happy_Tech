@@ -14,10 +14,10 @@
     <div class="col-md-12">
       <div class="box box-body">
         <div class="col-md-6">
-          <h4><i class="fa fa-list"></i> &nbsp; Blog Categories</h4>
+          <h4><i class="fa fa-list"></i> &nbsp; Job Categories</h4>
         </div>
         <div class="col-md-6 text-right">
-          <a href="<?= base_url('admin/blog/category/add'); ?>" class="btn btn-success"><i class="fa fa-plus"></i> Add New category</a>
+          <a href="<?= base_url('admin/category/add'); ?>" class="btn btn-success"><i class="fa fa-plus"></i> Add New category</a>
         </div>
         
       </div>
@@ -32,7 +32,7 @@
         <tr>
           <th>No</th>
           <th>category Name</th>
-          <th>Slug</th>
+          <th>Status</th>
           <th style="width: 150px;" class="text-right">Action</th>
         </tr>
         </thead>
@@ -41,13 +41,9 @@
           <tr>
             <td><?= ++$count; ?></td>
             <td><?= $row['name']; ?></td>
-            <td><?= $row['slug']; ?></td>
-            <td>
-              
-              <a title="Delete" class="btn-delete btn btn-sm btn-danger pull-right" href="<?= base_url('admin/blog/category/del/'.$row['id']); ?>"> <i class="fa fa-trash-o"></i></a>
-
-              <a title="Edit" class="update btn btn-sm btn-primary pull-right" href="<?= base_url('admin/blog/category/edit/'.$row['id'])?>"> <i class="fa fa-pencil-square-o"></i></a>
-
+            <td><?= ($row['status'] == 1)? '<span class="btn btn-success btn-xs">Active</span>': '<span class="btn btn-success btn-xs">Inactive</span>'; ?></td>
+            <td><a title="Delete" class="btn-delete btn btn-sm btn-danger pull-right" href="<?= base_url('admin/category/del/'.$row['id']); ?>"> <i class="fa fa-trash-o"></i></a>
+            <a title="Edit" class="update btn btn-sm btn-primary pull-right" href="<?= base_url('admin/category/edit/'.$row['id'])?>"> <i class="fa fa-pencil-square-o"></i></a>
             </td>
           </tr>
           <?php endforeach; ?>
@@ -78,6 +74,6 @@
   });
   </script>
   <script>
-  $("#blog").addClass('active');
+  $("#category").addClass('active');
   </script>
 
